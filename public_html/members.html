@@ -1,0 +1,208 @@
+<!doctype html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Pythia</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densityDpi=device-dpi">
+    <link rel="icon" type="image/png" sizes="64x64" href="themes/images/icons-png/pythia-icon.png">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="apple-touch-icon" sizes="180x180" href="themes/images/icons-png/pythia-180.png">
+    <link rel="stylesheet" href="themes/pythia.min.css" />
+    <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="members.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="members.js"></script>
+  </head>
+  <body>
+
+    <div data-role="page" id="home">
+      <header id=h2>
+          <p id="mHead">pythia</p>
+          <span>
+              <a id="friendSearchBtn"><img src="themes/images/icons-png/search-black.png"></a>
+              <a id="profileEdit"><img src="themes/images/icons-png/user-black.png"></a>
+          </span>
+      </header>
+      <div id=mainMenu>
+          <a data-role="button" href="#friends" class="large" id="friendsList">Friends List</a>
+          <a data-role="button" href="#map" class="large" id="locationsBtn">See statistics by location</a>
+          <a data-role="button" href="#news" class="large" id="news">COVID NEWS</a>
+          <span>
+              <a data-role="button" href="#report" id="report">Submit<br>Wellness<br>Report</a>
+              <a data-role="button" href="#settingsPage" id="settings">Settings<br><img src="themes/images/icons-png/gear-black.png"></a>
+          </span>
+      </div>
+
+      <div data-role="panel" id="profilePanel" 
+      data-position="right" 
+      data-display="reveal" 
+      data-dismissible="true" 
+      class="ui-panel ui-panel-position-right ui-panel-display-push ui-body-a ui-panel-animate ui-panel-open">
+        <div class="ui-panel-inner"><div class="panel-content">
+          <span><a href="#home" data-rel="close"><img src="themes\images\icons-png\delete-black.png"/></a><h2>Profile</h2></span>
+          <div id="profile_details">
+            <h3>Name:</h3>
+            <p id="profile_name"></p>
+            <h3>e-mail:</h3>
+            <p id="profile_email"></p>
+            <h3>Location:</h3>
+            <p id="profile_location"></p>
+            <h3>Health Status:</h3>
+            <p id="profile_sick"></p>
+          </div>
+        </div></div><!-- /content wrapper for padding -->
+        </div>
+        <div data-role="panel" id="searchPanel" 
+        data-position="right" 
+        data-display="reveal" 
+        data-dismissible="true" 
+        class="ui-panel ui-panel-position-right ui-panel-display-push ui-body-a ui-panel-animate ui-panel-open">
+          <div id="friendFinder">
+            <a href="#home" data-rel="close"><img src="themes\images\icons-png\delete-black.png"/></a>
+            <input id="fSearch"  data-mini="true" type="search" placeholder="Search for friends..." data-clear-btn="true"/>
+            <ul
+            id="allUsersList"
+            class="ui-listview"
+            data-role="controlgroup"
+            data-filter="true"
+            data-input="#fSearch"
+            data-enhanced="true">
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div data-role="page" id="friends">
+      <div class="head" id="friendsHead" data-role="header">
+          <a id="myFriendsBack" class="back" href="#home"><img src="themes/images/icons-png/carat-l-black.png"></a>
+          <span id="fL">my friends</span>
+          <div id="myfriendFinder"><input id="myfSearch"  data-mini="true" data-type="search" placeholder="Search my friends..." data-clear-btn="true"/></div>
+          <a class="search" id="myfriendSearchBtn"><img src="themes/images/icons-png/search-black.png"></a>
+      </div>
+      <ul
+        id="mfriendsList"
+        class="ui-listview"
+        data-role="controlgroup"
+        data-filter="true"
+        data-input="#myfSearch"
+        data-enhanced="true">
+
+        </ul>
+    </div>
+
+    <div data-role="page" id="map">
+    </div>
+
+    <div data-role="page" id="news">
+      <div class="head" id="newsHead" data-role="header">
+        <a class="back" href="#home"><img src="themes/images/icons-png/carat-l-black.png"></a>
+        <span>Latest CDC news</span>
+      </div>
+      <div id="twitter"></div>
+      <a class="twitter-timeline" href="https://twitter.com/CDCgov?ref_src=twsrc%5Etfw">Tweets by CDCgov</a>
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+
+    <div data-role="page" id="report">
+      <div class="head" id="wellnessHead" data-role="header">
+        <a class="back" href="#home"><img src="themes/images/icons-png/carat-l-black.png"></a>
+        <span>Submit Wellness Report</span>
+      </div>
+      <div>
+        <h2>Do you have any symptoms today?</h1>
+        <a value="none" data-role="button">No symptoms!</a>
+        <div class="row">
+          <a value="taste" class="inline"><img src="themes\images\icons-png\taste.png"/><br>Loss of taste</a>
+          <a value="smell" class="inline"><img src="themes\images\icons-png\smell.png"/><br>Loss of smell</a>
+          <a value="breath" class="inline"><img src="themes\images\icons-png\breath.png"/><br>Shortened Breath</a>
+        </div>
+        <div class="row">
+          <a value="cough" class="inline" class="inline"><img src="themes\images\icons-png\cough.png"/><br>Cough</a>
+          <a value="headache" class="inline" class="inline"><img src="themes\images\icons-png\headache.png"/><br>Headache</a>
+          <a value="bodyache" class="inline" class="inline"><img src="themes\images\icons-png\bodyache.png"/><br>Body Aches</a>
+        </div>
+        <div class="row">
+          <a value="throat" class="inline" class="inline"><img src="themes\images\icons-png\throat.png"/><br>Sore Throat</a>
+          <a value="fatigue" class="inline" class="inline"><img src="themes\images\icons-png\fatigue.png"/><br>Severe Fatigue</a>
+          <a value="fever" class="inline" class="inline"><img src="themes\images\icons-png\fever.png"/><br>Fever</a>
+        </div>
+        <div class="row">
+          <a value="digestive" class="inline" class="inline"><img src="themes\images\icons-png\digestive.png"/><br>Digestive Issues</a>
+          <a value="chills" class="inline" class="inline"><img src="themes\images\icons-png\chills.png"/><br>Chills</a>
+          <a value="nose" class="inline" class="inline"><img src="themes\images\icons-png\nose.png"/><br>Runny Nose</a>
+        </div>
+        <a value="symSubmit" data-role="button">Submit</a>
+      </div>
+    </div>
+    
+    <div data-role="page" id="report-test">
+      <div class="head" id="wellnessHead" data-role="header">
+        <a class="back" href="#report"><img src="themes/images/icons-png/carat-l-black.png"></a>
+        <span>Submit Wellness Report</span>
+      </div>
+      <div id="testForm">
+        <fieldset id="q1">
+          <h2>Have you been Tested recently?</h2>
+          <label for="checkbox1">Yes</label>
+          <input type="checkbox" name="checkbox1" id="checkbox1">
+          <label for="checkbox2">No</label>
+          <input type="checkbox" name="checkbox2" id="checkbox2">
+        </fieldset>
+        
+        <fieldset id="q2">
+          <h2>Were you positive or negative?</h2>
+          <label for="checkbox3">Positive</label>
+          <input type="checkbox" name="checkbox3" id="checkbox3">
+          <label for="checkbox4">Negative</label>
+          <input type="checkbox" name="checkbox4" id="checkbox4">
+        </fieldset>
+        
+        <fieldset id="q3"></fieldset>
+        <a id="testSubmit" data-role="button">Submit</a>
+      </div>
+    </div>
+
+    <div data-role="page" id="settingsPage">
+      <div class="head" id="friendsHead" data-role="header">
+        <a class="back" href="#home"><img src="themes/images/icons-png/carat-l-black.png"/></a>
+        <span>Settings</span>
+      </div>
+      <div id="form3">
+        <h2>Reset password</h2>
+        <input id="pass1" type="password" placeholder="Password" data-clear-btn="true"/>
+        <input id="pass2" type="password" placeholder="Re-Enter" data-clear-btn="true"/>
+      </div>
+      <div id="resetPassword">
+        <a id="resetPass" class="ui-btn ui-corner-all">Reset</a>
+      </div>
+    </div>
+
+    <div data-role="page" id="profilePage">
+      <div class="head" id="friendsHead" data-role="header">
+        <a class="back" href="#home"><img src="themes/images/icons-png/carat-l-black.png"/></a>
+        <span id="profTitle"></span>
+      </div>
+      <div id="profile2_details">
+        <h3>Name:</h3>
+        <p id="profile2_name"></p>
+        <h3>e-mail:</h3>
+        <p id="profile2_email"></p>
+        <h3>Location:</h3>
+        <p id="profile2_location"></p>
+        <h3>Health Status:</h3>
+        <p id="profile2_sick"></p>
+      </div>
+      <div id="addFriend">
+        <a id="addFriendBtn" class="ui-btn ui-corner-all">Add Friend</a>
+      </div>
+    </div>
+
+  </body>
+</html>

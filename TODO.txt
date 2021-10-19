@@ -1,0 +1,2 @@
+// prompt user on login for submit status
+// change the friends list icon?

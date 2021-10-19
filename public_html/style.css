@@ -1,0 +1,91 @@
+#welcome a{
+    width: 60%;
+    padding: 2vh;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top:2vh;
+    margin-bottom:2vh;
+}
+
+#form1 label.error {
+    color: red;
+    font-size: 1rem;
+    display: block;
+    margin-top: 5px;
+}
+
+#form1 div.ui-btn.ui-input-btn.ui-corner-all.ui-shadow{
+    width: 60vw;
+    margin:auto;
+    margin-top:5vh;
+}
+
+#form2 div.ui-btn.ui-input-btn.ui-corner-all.ui-shadow{
+    width: 60vw;
+    margin:auto;
+    margin-top:5vh;
+}
+
+#wButtons{
+    margin-top: 55%;
+}
+
+#h1{
+    text-align: center;
+    font-size: 10vh;
+    padding-bottom: 10vh;
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold;
+}
+
+.head{
+    font-size: 5vh;
+    text-align: center;
+    padding: 1vh;
+    padding-bottom: 2vh;
+    padding-top: 2vh;
+    line-height: 8vh;
+    font-family: 'Comfortaa', cursive;
+    height: 7vh;
+}
+
+.back.ui-link.ui-btn-left.ui-btn.ui-shadow.ui-corner-all{
+    height: 3vh;
+    width: 9vw;
+    top:2.2vh;
+    margin-left:1vw;
+    margin-top:.4vh;
+}
+
+.back img{
+    padding-top: 10%;
+    min-height: 60%;
+    min-width: auto;
+}
+
+#form1{
+    padding-bottom:5vh;
+    width: 80%;
+    margin: auto;
+}
+
+#form2{
+    padding-top: 20vh;
+    padding-bottom:5vh;
+    width: 80%;
+    margin: auto;
+}
+
+#confirm{
+    margin-top: 4vh;
+}
+
+#confirm a{
+    width:60%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#loc { position: relative; width:100%; }
+#loc input { border:none; background-color:#fff; display:block; width: 100%; box-sizing: border-box }
+#loc img { position: absolute; top: 30%; right: 15% }
